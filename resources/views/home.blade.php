@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Simpeg (Sistem Informasi Pegawai)</title>
+    <title>Simpeg - Sistem Informasi Pegawai</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="{{ asset('template/FlexStart/img/favicon.png') }}" rel="icon">
+    <link href="{{ asset('template/FlexStart/img/logo/logo-brown-4.svg') }}" rel="icon">
     <link href="{{ asset('template/FlexStart/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
     <!-- Fonts -->
@@ -31,23 +31,23 @@
 </head>
 
 <body class="index-page">
-
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="container-fluid container-xl position-relative d-flex align-items-center">
             <a href="" class="logo d-flex align-items-center me-auto">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
-                <img src="{{ asset('template/FlexStart/img/logo.png') }}" alt="">
-                <h1 class="sitename">FlexStart</h1>
+                <img src="{{ asset('template/FlexStart/img/logo/logo-4.svg') }}" alt="">
+                <h1 class="sitename">Simpeg</h1>
             </a>
             <nav id="navmenu" class="navmenu">
                 <ul>
                     <li><a href="#hero" class="active">Home<br></a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#team">Team</a></li>
+                    <li><a href="#about">Tentang</a></li>
+                    <li><a href="#team">PegawaiKu</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
-            <a class="btn-getstarted flex-md-shrink-0" href="index.html#about">Login</a>
+            <a class="btn-getstarted flex-md-shrink-0" href="index.html#about">Masuk <i
+                    class="bi bi-box-arrow-in-right"></i></a>
         </div>
     </header>
 
@@ -57,18 +57,14 @@
             <div class="container">
                 <div class="row gy-4">
                     <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                        <h1 data-aos="fade-up">We offer modern solutions for growing your business</h1>
-                        <p data-aos="fade-up" data-aos-delay="100">We are team of talented designers making websites
-                            with Bootstrap</p>
+                        <h1 data-aos="fade-up">Sistem Informasi Pegawai</h1>
+                        <p data-aos="fade-up" data-aos-delay="100">Aplikasi Pencatatan Data Pegawai</p>
                         <div class="d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
-                            <a href="#about" class="btn-get-started">Get Started <i class="bi bi-arrow-right"></i></a>
-                            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
-                                class="glightbox btn-watch-video d-flex align-items-center justify-content-center ms-0 ms-md-4 mt-4 mt-md-0"><i
-                                    class="bi bi-play-circle"></i><span>Watch Video</span></a>
+                            <a href="#about" class="btn-get-started">Masuk <i class="bi bi-box-arrow-in-right"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out">
-                        <img src="{{ asset('template/FlexStart/img/hero-img.png') }}" class="img-fluid animated"
+                        <img src="{{ asset('template/FlexStart/img/employees.png') }}" class="img-fluid animated"
                             alt="">
                     </div>
                 </div>
@@ -79,25 +75,15 @@
         <section id="about" class="about section">
             <div class="container" data-aos="fade-up">
                 <div class="row gx-0">
-
                     <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up"
                         data-aos-delay="200">
                         <div class="content">
-                            <h3>Who We Are</h3>
-                            <h2>Expedita voluptas omnis cupiditate totam eveniet nobis sint iste. Dolores est repellat
-                                corrupti reprehenderit.</h2>
+                            <h2>Tentang Simpeg</h2>
                             <p>
-                                Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inventore et et dolor
-                                consequatur itaque ut voluptate sed et. Magnam nam ipsum tenetur suscipit voluptatum nam
-                                et est corrupti.
+                                Simpeg (Sistem Informasi Pegawai) adalah aplikasi web untuk pencatatan data pegawai yang
+                                memungkinkan pengguna untuk menambahkan, mengedit, menghapus, dan melihat data
+                                pegawai.
                             </p>
-                            <div class="text-center text-lg-start">
-                                <a href="#"
-                                    class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
-                                    <span>Read More</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                </a>
-                            </div>
                         </div>
                     </div>
 
@@ -108,72 +94,16 @@
             </div>
         </section><!-- /About Section -->
 
-        <!-- Stats Section -->
-        <section id="stats" class="stats section">
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-                <div class="row gy-4">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="stats-item d-flex align-items-center w-100 h-100">
-                            <i class="bi bi-emoji-smile color-blue flex-shrink-0"></i>
-                            <div>
-                                <span data-purecounter-start="0" data-purecounter-end="232"
-                                    data-purecounter-duration="1" class="purecounter"></span>
-                                <p>Happy Clients</p>
-                            </div>
-                        </div>
-                    </div><!-- End Stats Item -->
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="stats-item d-flex align-items-center w-100 h-100">
-                            <i class="bi bi-journal-richtext color-orange flex-shrink-0" style="color: #ee6c20;"></i>
-                            <div>
-                                <span data-purecounter-start="0" data-purecounter-end="521"
-                                    data-purecounter-duration="1" class="purecounter"></span>
-                                <p>Projects</p>
-                            </div>
-                        </div>
-                    </div><!-- End Stats Item -->
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="stats-item d-flex align-items-center w-100 h-100">
-                            <i class="bi bi-headset color-green flex-shrink-0" style="color: #15be56;"></i>
-                            <div>
-                                <span data-purecounter-start="0" data-purecounter-end="1463"
-                                    data-purecounter-duration="1" class="purecounter"></span>
-                                <p>Hours Of Support</p>
-                            </div>
-                        </div>
-                    </div><!-- End Stats Item -->
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="stats-item d-flex align-items-center w-100 h-100">
-                            <i class="bi bi-people color-pink flex-shrink-0" style="color: #bb0852;"></i>
-                            <div>
-                                <span data-purecounter-start="0" data-purecounter-end="15"
-                                    data-purecounter-duration="1" class="purecounter"></span>
-                                <p>Hard Workers</p>
-                            </div>
-                        </div>
-                    </div><!-- End Stats Item -->
-                </div>
-            </div>
-        </section><!-- /Stats Section -->
-
         <!-- Team Section -->
         <section id="team" class="team section">
-
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
-                <h2>Team</h2>
-                <p>Our hard working team</p>
+                <h2>PegawaiKu</h2>
             </div><!-- End Section Title -->
 
             <div class="container">
-
                 <div class="row gy-4">
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
-                        data-aos-delay="100">
+                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
                         <div class="team-member">
                             <div class="member-img">
                                 <img src="{{ asset('template/FlexStart/img/team/team-1.jpg') }}" class="img-fluid"
@@ -259,69 +189,17 @@
                             </div>
                         </div>
                     </div><!-- End Team Member -->
-
                 </div>
-
             </div>
-
         </section><!-- /Team Section -->
     </main>
 
     <footer id="footer" class="footer">
-        <div class="container footer-top">
-            <div class="row gy-4">
-                <div class="col-lg-4 col-md-6 footer-about">
-                    <a href="index.html" class="d-flex align-items-center">
-                        <span class="sitename">FlexStart</span>
-                    </a>
-                    <div class="footer-contact pt-3">
-                        <p>A108 Adam Street</p>
-                        <p>New York, NY 535022</p>
-                        <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-                        <p><strong>Email:</strong> <span>info@example.com</span></p>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-md-3 footer-links">
-                    <h4>Useful Links</h4>
-                    <ul>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-2 col-md-3 footer-links">
-                    <h4>Our Services</h4>
-                    <ul>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-4 col-md-12">
-                    <h4>Follow Us</h4>
-                    <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
-                    <div class="social-links d-flex">
-                        <a href=""><i class="bi bi-twitter-x"></i></a>
-                        <a href=""><i class="bi bi-facebook"></i></a>
-                        <a href=""><i class="bi bi-instagram"></i></a>
-                        <a href=""><i class="bi bi-linkedin"></i></a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
         <div class="container copyright text-center mt-4">
-            <p>© <span>Copyright</span> <strong class="px-1 sitename">FlexStart</strong> <span>All Rights
+            <p>© <span>Copyright</span> <strong class="px-1 sitename">Simpeg</strong> <span>All Rights
                     Reserved</span>
             </p>
         </div>
-
     </footer>
 
     <!-- Scroll Top -->
@@ -340,7 +218,6 @@
 
     <!-- Main JS File -->
     <script src="{{ asset('template/FlexStart/js/main.js') }}"></script>
-
 </body>
 
 </html>
