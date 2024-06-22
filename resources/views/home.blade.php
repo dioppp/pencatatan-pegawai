@@ -9,8 +9,7 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="{{ asset('img/logo/logo-brown-4.svg') }}" rel="icon">
-    <link href="{{ asset('img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    <link href="{{ asset('img/logos/logo-brown-4.svg') }}" rel="icon">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -35,8 +34,7 @@
         <div class="container-fluid container-xl position-relative d-flex align-items-center">
             <a href="" class="logo d-flex align-items-center me-auto">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
-                <img src="{{ asset('img/logo/logo-4.svg') }}" alt="">
-                <h1 class="sitename">Simpeg</h1>
+                <img src="{{ asset('img/logos/logo-5.svg') }}" alt="">
             </a>
             <nav id="navmenu" class="navmenu">
                 <ul>
@@ -46,7 +44,7 @@
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
-            <a class="btn-getstarted flex-md-shrink-0" href="{{ url('/login') }}">Masuk <i
+            <a class="btn-getstarted flex-md-shrink-0" href="{{ url('/login') }}">Login <i
                     class="bi bi-box-arrow-in-right"></i></a>
         </div>
     </header>
@@ -60,7 +58,7 @@
                         <h1 data-aos="fade-up">Sistem Informasi Pegawai</h1>
                         <p data-aos="fade-up" data-aos-delay="100">Aplikasi Pencatatan Data Pegawai</p>
                         <div class="d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
-                            <a href="{{ url('/login') }}" class="btn-get-started">Masuk <i class="bi bi-box-arrow-in-right"></i></a>
+                            <a href="{{ url('/login') }}" class="btn-get-started">Login <i class="bi bi-box-arrow-in-right"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out">
