@@ -91,9 +91,9 @@
                                                 <a href="{{ route('employees.show', ['employee' => $e->id]) }}" class="btn btn-dark">
                                                     <i class="ti ti-info-circle"></i>
                                                 </a>
-                                                <button type="button" class="btn btn-warning">
+                                                <a href="{{ route('employees.edit', ['employee' => $e->id]) }}" class="btn btn-warning">
                                                     <i class="ti ti-edit"></i>
-                                                </button>
+                                                </a>
                                                 <button type="button" class="btn btn-danger">
                                                     <i class="ti ti-trash"></i>
                                                 </button>

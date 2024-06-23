@@ -52,7 +52,7 @@ class EmployeeController extends Controller
      */
     public function edit(Employee $employee)
     {
-        //
+        return view('employees.edit', compact('employee'));
     }
 
     /**
@@ -60,7 +60,11 @@ class EmployeeController extends Controller
      */
     public function update(UpdateEmployeeRequest $request, Employee $employee)
     {
-        //
+        if ($employee) {
+            $employee->update($request->validated());
+            return redirect()->route('employees.index')->with('success', 'Employee updated successfully');
+        }
+        return redirect()->route('employees.index')->with('error', 'Employee not found');
     }
 
     /**
