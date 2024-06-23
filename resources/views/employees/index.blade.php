@@ -88,15 +88,23 @@
                                                 <h6 class="mb-0 fw-normal">{{ $e->jabatan }}</h6>
                                             </td>
                                             <td class="border-bottom-0">
-                                                <a href="{{ route('employees.show', ['employee' => $e->id]) }}" class="btn btn-dark">
+                                                <a href="{{ route('employees.show', ['employee' => $e->id]) }}"
+                                                    class="btn btn-dark">
                                                     <i class="ti ti-info-circle"></i>
                                                 </a>
-                                                <a href="{{ route('employees.edit', ['employee' => $e->id]) }}" class="btn btn-warning">
+                                                <a href="{{ route('employees.edit', ['employee' => $e->id]) }}"
+                                                    class="btn btn-warning">
                                                     <i class="ti ti-edit"></i>
                                                 </a>
-                                                <button type="button" class="btn btn-danger">
-                                                    <i class="ti ti-trash"></i>
-                                                </button>
+                                                <form action="{{ route('employees.destroy', ['employee' => $e->id]) }}"
+                                                    method="POST" style="display: inline-block;">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-danger"
+                                                        onclick="return confirm('Apakah kamu yakin ingin menghapus data ini?')">
+                                                        <i class="ti ti-trash"></i>
+                                                    </button>
+                                                </form>
                                             </td>
                                         </tr>
                                     @empty
