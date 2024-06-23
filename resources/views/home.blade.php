@@ -58,12 +58,12 @@
                         <h1 data-aos="fade-up">Sistem Informasi Pegawai</h1>
                         <p data-aos="fade-up" data-aos-delay="100">Aplikasi Pencatatan Data Pegawai</p>
                         <div class="d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
-                            <a href="{{ route('login-view') }}" class="btn-get-started">Login <i class="bi bi-box-arrow-in-right"></i></a>
+                            <a href="{{ route('login-view') }}" class="btn-get-started">Login <i
+                                    class="bi bi-box-arrow-in-right"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out">
-                        <img src="{{ asset('img/employees.png') }}" class="img-fluid animated"
-                            alt="">
+                        <img src="{{ asset('img/employees.png') }}" class="img-fluid animated" alt="">
                     </div>
                 </div>
             </div>
@@ -101,92 +101,26 @@
 
             <div class="container">
                 <div class="row gy-4">
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                        <div class="team-member">
-                            <div class="member-img">
-                                <img src="{{ asset('img/team/team-1.jpg') }}" class="img-fluid"
-                                    alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter-x"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                    @foreach ($employees as $e)
+                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
+                            data-aos-delay="{{ $loop->iteration * 100 }}">
+                            <div class="team-member">
+                                <div class="member-img">
+                                    <img src="{{ asset('storage/' . $e->foto) }}" class="img-fluid" alt="">
+                                    <div class="social">
+                                        <a href="https://twitter.com/"><i class="bi bi-twitter-x"></i></a>
+                                        <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                                        <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                                        <a href="https://www.linkedin.com/"><i class="bi bi-linkedin"></i></a>
+                                    </div>
+                                </div>
+                                <div class="member-info">
+                                    <h4>{{ $e->nama }}</h4>
+                                    <span>{{ $e->jabatan }}</span>
                                 </div>
                             </div>
-                            <div class="member-info">
-                                <h4>Walter White</h4>
-                                <span>Chief Executive Officer</span>
-                                <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut.
-                                    Ipsum exercitationem iure minima enim corporis et voluptate.</p>
-                            </div>
-                        </div>
-                    </div><!-- End Team Member -->
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
-                        data-aos-delay="200">
-                        <div class="team-member">
-                            <div class="member-img">
-                                <img src="{{ asset('img/team/team-2.jpg') }}" class="img-fluid"
-                                    alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter-x"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>Sarah Jhonson</h4>
-                                <span>Product Manager</span>
-                                <p>Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima
-                                    suscipit corporis. Voluptate sed quas reiciendis animi neque sapiente.</p>
-                            </div>
-                        </div>
-                    </div><!-- End Team Member -->
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
-                        data-aos-delay="300">
-                        <div class="team-member">
-                            <div class="member-img">
-                                <img src="{{ asset('img/team/team-3.jpg') }}" class="img-fluid"
-                                    alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter-x"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>William Anderson</h4>
-                                <span>CTO</span>
-                                <p>Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt.
-                                    Voluptates enim aut architecto porro aspernatur molestiae modi.</p>
-                            </div>
-                        </div>
-                    </div><!-- End Team Member -->
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
-                        data-aos-delay="400">
-                        <div class="team-member">
-                            <div class="member-img">
-                                <img src="{{ asset('img/team/team-4.jpg') }}" class="img-fluid"
-                                    alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter-x"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>Amanda Jepson</h4>
-                                <span>Accountant</span>
-                                <p>Rerum voluptate non adipisci animi distinctio et deserunt amet voluptas. Quia aut
-                                    aliquid doloremque ut possimus ipsum officia.</p>
-                            </div>
-                        </div>
-                    </div><!-- End Team Member -->
+                        </div><!-- End Team Member -->
+                    @endforeach
                 </div>
             </div>
         </section><!-- /Team Section -->
