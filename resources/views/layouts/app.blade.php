@@ -27,6 +27,7 @@
     <script src="{{ asset('libs/apexcharts/dist/apexcharts.min.js') }}"></script>
     <script src="{{ asset('libs/simplebar/dist/simplebar.js') }}"></script>
     <script src="{{ asset('js/dashboard.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     @stack('scripts')
 </body>
 
