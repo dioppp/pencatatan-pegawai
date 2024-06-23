@@ -26,21 +26,29 @@ class HomeController extends Controller
     public function index()
     {
         $employeeGender = Employee::select('jenis_kelamin', DB::raw('count(*) as total'))
-                ->groupBy('jenis_kelamin')
-                ->get();
+            ->groupBy('jenis_kelamin')
+            ->get();
 
         $employeeAddress = Employee::select('alamat', DB::raw('count(*) as total'))
-                ->groupBy('alamat')
-                ->get();
+            ->groupBy('alamat')
+            ->get();
 
         $employeeDepartment = Employee::select('departemen', DB::raw('count(*) as total'))
-                ->groupBy('departemen')
-                ->get();
+            ->groupBy('departemen')
+            ->get();
+
+        $employeePosition = Employee::select('jabatan', DB::raw('count(*) as total'))
+            ->groupBy('jabatan')
+            ->get();
+
+        $employeeStatus = Employee::select('status', DB::raw('count(*) as total'))
+            ->groupBy('status')
+            ->get();
 
         $employeeEducation = Employee::select('pendidikan', DB::raw('count(*) as total'))
-                ->groupBy('pendidikan')
-                ->get();
+            ->groupBy('pendidikan')
+            ->get();
 
-        return view('dashboard', compact('employeeGender', 'employeeAddress', 'employeeDepartment', 'employeeEducation'));
+        return view('dashboard', compact('employeeGender', 'employeeAddress', 'employeeDepartment', 'employeePosition', 'employeeStatus', 'employeeEducation'));
     }
 }

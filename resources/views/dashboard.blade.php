@@ -14,21 +14,32 @@
                     </div>
                     <div class="card-body">
                         <div class="row mb-5">
-                            <div class="col-3">
+                            <div class="col-4">
                                 <h4 class="fw-semibold mb-3 text-center"><b>Jenis Kelamin</b></h4>
                                 <canvas id="genderChart"></canvas>
                             </div>
-                            <div class="col-3">
+                            <div class="col-4">
                                 <h4 class="fw-semibold mb-3 text-center"><b>Alamat</b></h4>
                                 <canvas id="addressChart"></canvas>
                             </div>
-                            <div class="col-3">
+                            <div class="col-4">
                                 <h4 class="fw-semibold mb-3 text-center"><b>Departemen</b></h4>
                                 <canvas id="departmentChart"></canvas>
                             </div>
-                            <div class="col-3">
+
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col-4">
+                                <h4 class="fw-semibold mb-3 text-center"><b>Jabatan</b></h4>
+                                <canvas id="positionChart"></canvas>
+                            </div>
+                            <div class="col-4">
+                                <h4 class="fw-semibold mb-3 text-center"><b>Status Kepegawaian</b></h4>
+                                <canvas id="statusChart"></canvas>
+                            </div>
+                            <div class="col-4">
                                 <h4 class="fw-semibold mb-3 text-center"><b>Pendidikan Terakhir</b></h4>
-                                <canvas id="educationChart" style="width: 400px; height: 400px;"></canvas>
+                                <canvas id="educationChart"></canvas>
                             </div>
                         </div>
                     </div>
@@ -125,6 +136,78 @@
                 datasets: [{
                     label: 'Banyak data',
                     data: employeeDepartmentData,
+                    backgroundColor: [
+                        'rgba(111, 78, 55, 1)',
+                        'rgba(166, 123, 91, 1)',
+                        'rgba(236, 177, 118, 1)',
+                        'rgba(254, 216, 177, 1)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(111, 78, 55, 1)',
+                        'rgba(166, 123, 91, 1)',
+                        'rgba(236, 177, 118, 1)',
+                        'rgba(254, 216, 177, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            }
+        });
+    </script>
+
+    {{-- Position Chart --}}
+    <script>
+        var employeePositionLabels = @json($employeePosition->pluck('jabatan'));
+        var employeePositionData = @json($employeePosition->pluck('total'));
+
+        const ctxPosition = document.getElementById('positionChart');
+
+        new Chart(ctxPosition, {
+            type: 'pie',
+            data: {
+                labels: employeePositionLabels,
+                datasets: [{
+                    label: 'Banyak data',
+                    data: employeePositionData,
+                    backgroundColor: [
+                        'rgba(111, 78, 55, 1)',
+                        'rgba(166, 123, 91, 1)',
+                        'rgba(236, 177, 118, 1)',
+                        'rgba(254, 216, 177, 1)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(111, 78, 55, 1)',
+                        'rgba(166, 123, 91, 1)',
+                        'rgba(236, 177, 118, 1)',
+                        'rgba(254, 216, 177, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            }
+        });
+    </script>
+
+    {{-- Status Chart --}}
+    <script>
+        var employeeStatusLabels = @json($employeeStatus->pluck('status'));
+        var employeeStatusData = @json($employeeStatus->pluck('total'));
+
+        const ctxStatus = document.getElementById('statusChart');
+
+        new Chart(ctxStatus, {
+            type: 'pie',
+            data: {
+                labels: employeeStatusLabels,
+                datasets: [{
+                    label: 'Banyak data',
+                    data: employeeStatusData,
                     backgroundColor: [
                         'rgba(111, 78, 55, 1)',
                         'rgba(166, 123, 91, 1)',
