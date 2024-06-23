@@ -17,7 +17,7 @@
                     <span class="hide-menu">Home</span>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="" aria-expanded="false">
+                    <a class="sidebar-link" href="{{ route('dashboard') }}" aria-expanded="false">
                         <span>
                             <i class="ti ti-layout-dashboard"></i>
                         </span>
@@ -26,14 +26,14 @@
                 </li>
                 <li class="nav-small-cap">
                     <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                    <span class="hide-menu">UI COMPONENTS</span>
+                    <span class="hide-menu">FEATURES</span>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="./ui-buttons.html" aria-expanded="false">
+                    <a class="sidebar-link" href="{{ route('employees.index') }}" aria-expanded="false">
                         <span>
-                            <i class="ti ti-article"></i>
+                            <i class="ti ti-users"></i>
                         </span>
-                        <span class="hide-menu">Buttons</span>
+                        <span class="hide-menu">Daftar Pegawai</span>
                     </a>
                 </li>
             </ul>
