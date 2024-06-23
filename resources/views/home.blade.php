@@ -44,7 +44,7 @@
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
-            <a class="btn-getstarted flex-md-shrink-0" href="{{ url('/login') }}">Login <i
+            <a class="btn-getstarted flex-md-shrink-0" href="{{ route('login-view') }}">Login <i
                     class="bi bi-box-arrow-in-right"></i></a>
         </div>
     </header>
@@ -58,7 +58,7 @@
                         <h1 data-aos="fade-up">Sistem Informasi Pegawai</h1>
                         <p data-aos="fade-up" data-aos-delay="100">Aplikasi Pencatatan Data Pegawai</p>
                         <div class="d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
-                            <a href="{{ url('/login') }}" class="btn-get-started">Login <i class="bi bi-box-arrow-in-right"></i></a>
+                            <a href="{{ route('login-view') }}" class="btn-get-started">Login <i class="bi bi-box-arrow-in-right"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out">
