@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\GuestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +18,7 @@ use App\Http\Controllers\Auth\LoginController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [GuestController::class, 'index']);
 
 Route::get('/login', [LoginController::class, 'showLoginView'])->name('login-view');
 Route::post('/login', [LoginController::class, 'login'])->name('login');
