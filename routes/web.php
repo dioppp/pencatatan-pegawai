@@ -1,6 +1,10 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,14 +21,11 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('/login', [LoginController::class, 'showLoginView'])->name('login-view');
+Route::post('/login', [LoginController::class, 'login'])->name('login');
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
-
-Route::get('/pegawai-add', function () {
-    return view('add');
+Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
+    Route::resource('employees', EmployeeController::class);
 });
