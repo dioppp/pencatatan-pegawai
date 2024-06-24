@@ -15,30 +15,30 @@
                     <div class="card-body">
                         <div class="row mb-5">
                             <div class="col-4">
-                                <h4 class="fw-semibold mb-3 text-center"><b>Jenis Kelamin</b></h4>
+                                <h5 class="fw-semibold mb-3 text-center"><b>Jenis Kelamin</b></h5>
                                 <canvas id="genderChart"></canvas>
                             </div>
                             <div class="col-4">
-                                <h4 class="fw-semibold mb-3 text-center"><b>Alamat</b></h4>
+                                <h5 class="fw-semibold mb-3 text-center"><b>Alamat</b></h5>
                                 <canvas id="addressChart"></canvas>
                             </div>
                             <div class="col-4">
-                                <h4 class="fw-semibold mb-3 text-center"><b>Departemen</b></h4>
+                                <h5 class="fw-semibold mb-3 text-center"><b>Departemen</b></h5>
                                 <canvas id="departmentChart"></canvas>
                             </div>
 
                         </div>
                         <div class="row mt-5">
                             <div class="col-4">
-                                <h4 class="fw-semibold mb-3 text-center"><b>Jabatan</b></h4>
+                                <h5 class="fw-semibold mb-3 text-center"><b>Jabatan</b></h5>
                                 <canvas id="positionChart"></canvas>
                             </div>
                             <div class="col-4">
-                                <h4 class="fw-semibold mb-3 text-center"><b>Status Kepegawaian</b></h4>
+                                <h5 class="fw-semibold mb-3 text-center"><b>Status Kepegawaian</b></h5>
                                 <canvas id="statusChart"></canvas>
                             </div>
                             <div class="col-4">
-                                <h4 class="fw-semibold mb-3 text-center"><b>Pendidikan Terakhir</b></h4>
+                                <h5 class="fw-semibold mb-3 text-center"><b>Pendidikan Terakhir</b></h5>
                                 <canvas id="educationChart"></canvas>
                             </div>
                         </div>
